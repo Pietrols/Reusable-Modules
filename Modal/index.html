@@ -5,7 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="modal.js" defer></script>
-    <link rel="stylesheet" href="styles.js" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <section class="modal hidden">
+      <div class="flex">
+        <img
+          src="./images/20a32f9b-1a4e-4ab0-bbe0-fe090cffe514.svg"
+          width="50px"
+          height="50px"
+          alt="user"
+        />
+        <button class="btn-close">⨉</button>
+      </div>
+      <div>
+        <h3>stay in touch</h3>
+        <p>
+          This is a dummy newsletter form so don't bother trying to test it. Not
+          that I expect you to, anyways. :)
+        </p>
+      </div>
+      <input type="email" id="email" placeholder="pietrols@gmail.com" />
+      <button class="btn">Submit</button>
+    </section>
+    <div class="overlay hidden"></div>
+    <button class="btn btn-open">Open Modal</button>
+  </body>
 </html>

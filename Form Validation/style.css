@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding-left: 2rem;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 20px;
+  margin-top: 20px;
+  gap: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form > h2 {
+  text-align: center; /* Centered heading */
+  margin-bottom: 15px; /* Spacing below heading */
+  color: #555;
+}
+
+label {
+  margin-bottom: -2px; /* Bring label closer to input */
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #444;
+}
+
+input {
+  padding: 10px; /* Increased padding */
+  width: 100%; /* Use full width */
+  border: 1px solid #ccc; /* Default border */
+  border-radius: 4px;
+  color: #333;
+  font-size: 1em;
+  transition: border-color 0.2s ease-in-out; /* Smooth transition */
+}
+
+/* invalid fields */
+input.invalid, /* Use class instead of pseudo-class for consistency */
+  input:invalid {
+  /* Keep pseudo-class for initial state if needed */
+  border-color: #e74c3c; /* Red border for invalid */
+}
+
+input:focus {
+  outline: none;
+  border-color: #3498db; /* Blue border on focus */
+  box-shadow: 0 0 3px rgba(52, 152, 219, 0.5); /* Subtle glow on focus */
+}
+
+input:focus:invalid {
+  border-color: #e74c3c; /* Keep red border on focus if invalid */
+  box-shadow: 0 0 3px rgba(231, 76, 60, 0.5); /* Red glow on focus */
+}
+
+/* --- Error Message Styling --- */
+.error-message {
+  color: #e74c3c; /* Red color for errors */
+  font-size: 0.8em;
+  min-height: 1.2em; /* Prevent layout shifts */
+  display: block; /* Ensure it takes its own line */
+  margin-top: 3px; /* Space above message */
+  margin-bottom: 5px; /* Space below message */
+  /* visibility: hidden; Initially hidden */
+}
+
+/* --- Submit Button Styling --- */
+#submit-btn {
+  padding: 12px;
+  margin-top: 15px;
+  width: 100%;
+  font-size: 1.1em; /* Slightly larger font */
+  font-weight: bold;
+  color: #fff;
+  background-color: #3498db; /* Blue background */
+  border: none; /* Remove default border */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#submit-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Remove h3 inside button, adjust button text directly */
+#submit-btn h3 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
